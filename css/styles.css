@@ -1,0 +1,186 @@
+/* Allgemeine Stile */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f8ff; /* Helles Blau für den Hintergrund */
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #003366; /* Dunkles Blau */
+  color: #ffffff; /* Weißer Text */
+  text-align: center;
+  padding: 15px 0;
+}
+
+header h1, footer p {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  background-color: #00509e; /* Mittelblau */
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main-Bereich */
+main {
+  padding: 20px;
+  color: #003366; /* Dunkles Blau */
+  text-align: center;
+}
+
+main h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+main p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+/* Galerie-Stile */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  background-color: #e6f7ff; /* Sehr helles Blau */
+  border-radius: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 5px solid #ffffff; /* Weißer Rahmen */
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-color: #00509e; /* Rahmenfarbe bei Hover */
+}
+
+/* Button-Stile */
+button {
+  background-color: #003366; /* Dunkles Blau */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #00509e; /* Mittelblau bei Hover */
+  transform: scale(1.05);
+}
+
+/* Footer-Stile */
+footer {
+  font-size: 0.9em;
+  padding: 10px 0;
+}
+
+/* Styling für alle Bilder mit der Klasse "homeImage" */
+.homeImage {
+  display: block;
+  margin: 20px auto;
+  max-width: 45%; /* Halbe Größe */
+  height: auto; /* Proportionale Höhe */
+  border: 5px solid #00509e; /* Mittelblauer Rahmen */
+  border-radius: 15px; /* Abgerundete Ecken */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Schatten */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation */
+}
+
+.homeImage:hover {
+  transform: scale(1.05); /* Vergrößerung bei Hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stärkere Schatten bei Hover */
+  border-color: #003366; /* Dunkelblauer Rahmen bei Hover */
+}
+
+/* Lightbox-Stile */
+.lightbox {
+  display: none; /* Versteckt die Lightbox standardmäßig */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dunkler Hintergrund mit Transparenz */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%; /* Container passt sich an die Breite des Viewports an */
+  max-height: 100%; /* Container passt sich an die Höhe des Viewports an */
+  overflow: hidden; /* Verhindert, dass Bild über den Container hinausragt */
+}
+
+.lightbox-content img {
+  width: auto;
+  height: auto;
+  max-width: 100vw; /* Passt die Breite des Bildes an die Fensterbreite an */
+  max-height: 100vh; /* Passt die Höhe des Bildes an die Fensterhöhe an */
+  border-radius: 10px; /* Optionale Abrundung der Ecken */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Schatteneffekt */
+}
+
+/* Schließen-Button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.close-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
